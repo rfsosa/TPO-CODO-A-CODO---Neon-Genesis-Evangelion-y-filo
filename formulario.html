@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Genesis Evangelion y filosofía</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gelasio&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="icono.ico" type="image/x-icon">
+
+</head>
+<body>
+    <header> 
+        <div class="header-logo" style="overflow:auto"><a href="index.html"><img src="img/logo.png" alt="Neon Genesis Evangelion y filosofía" srcset=""></a></div>
+        <nav class="header-menubar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="filo-info.html">Filósofos</a></li>
+                <li><a href="formulario.html">Suscribirse</a></li>
+        </ul>
+        </nav>
+    </header>
+    
+    <main>     
+        <img class="img-form" style="transform: skewx(0deg) translatex(10px);
+            transform-origin: bottom left;"
+     src="img/rei.png">
+        <div class="container">
+            <h2>Suscribite para obtener novedades</h2>
+            <form name="fvalida">
+                <div class="form-group">
+                    <label for="firstname">Nombre:</label>
+                    <input type="firstname" class="form-control" id="name" placeholder="" name="name">
+                  </div>
+                <div class="form-group">
+                <label for="email">Correo Electronico:</label>
+                <input type="email" class="form-control" id="email" placeholder="" name="email">
+              </div>
+               <div class="form-group">
+                <label for="pwd">Contraseña:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="" name="pswd">
+              </div>
+               <div class="form-group form-check">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="remember"> Recordarme
+                </label>
+              </div>
+              <button type="button" class="btn btn-dark" value="enviar" onclick="valida_envia()">Enviar</button>
+            </form>
+          </div>
+    </main>
+    <footer class="footer">
+        <div>
+            <img src="img/footer.png" alt="" srcset="">
+            <p>Neon Genesis Evangelion y filosofía</p> 
+         <i class="fab fa-instagram"></i>
+         <i class="fab fa-facebook-square"></i>
+         <i class="fab fa-twitter-square"></i>
+        </div>
+   </footer>   
+   <script>
+       function valida_envia() {
+        if (document.fvalida.name.value.length == 0) {
+            alert("Tiene que escribir su nombre")
+            document.fvalida.name.focus()
+            return 0;
+        }
+            
+        if (document.fvalida.email.value.length == 0) {
+            alert("Ingrese su correo electrónico")
+            document.fvalida.email.focus()
+            return 0;
+        }
+        if (document.fvalida.pswd.value.length == 0) {
+            alert("Contraseña inválida")
+            document.fvalida.pswd.focus()
+            return 0;
+        }
+        
+        alert("¡Muchas gracias por suscribirse!");
+        document.fvalida.submit();
+        
+    }
+   </script>
+</body>
+</html>
